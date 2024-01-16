@@ -1,3 +1,5 @@
+package s11478_서로다른부분문자열의개수;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

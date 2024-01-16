@@ -1,3 +1,5 @@
+package s2941_크로아티아알파벳;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 

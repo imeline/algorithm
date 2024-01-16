@@ -1,3 +1,5 @@
+package s1316_그룹단어체커;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
