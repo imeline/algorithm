@@ -1,3 +1,5 @@
+package s2018_수들의합5;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
