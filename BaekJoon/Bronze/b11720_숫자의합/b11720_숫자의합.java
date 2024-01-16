@@ -1,3 +1,5 @@
+package b11720_숫자의합;
+
 import java.util.Scanner;
 
 public class b11720_숫자의합 {
