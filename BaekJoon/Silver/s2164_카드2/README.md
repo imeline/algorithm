@@ -8,8 +8,8 @@
 - 큐 선언은 linkedlist 로 : `Queue<Integer> queue = new LinkedList<>();`
 - 큐 함수
   + 값 추가 : `q.add()` 나 `q.offer()`
-    + 첫 번째 값 반환 및 제거 : `q.poll()`
-    + 첫 번째 값 제거 : `q.remove()`
-    + 첫 번째 값 반환 : `q.peek()`
-    + 초기화 : `q.clear()`
-    + 크기 : `q.size()`
+  + 첫 번째 값 반환 및 제거 : `q.poll()`
+  + 첫 번째 값 제거 : `q.remove()`
+  + 첫 번째 값 반환 : `q.peek()`
+  + 초기화 : `q.clear()`
+  + 크기 : `q.size()`
