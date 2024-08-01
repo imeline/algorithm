@@ -29,22 +29,22 @@ public class g1717_집합의표현 {
 			if(command == 0) union(a,b);
 			// 같은 집합에 속했는지 확인하고 결과 출력
 			else {
-				if (findParent(a) == findParent(b)) System.out.println("YES");
+				if (find(a) == find(b)) System.out.println("YES");
 				else
 					System.out.println("NO");
 			}
 		}
 	}
 
-	public static int findParent(int x) {
+	public static int find(int x) {
 		if (x == parent[x]) return x;
 
-		return parent[x] = findParent(parent[x]); // 부모의 부모를 찾음
+		return parent[x] = find(parent[x]); // 부모의 부모를 찾음
 	}
 
 	public static void union(int x, int y) {
-		x = findParent(x);
-		y = findParent(y);
+		x = find(x);
+		y = find(y);
 
 		if (x != y) {
 			if(x < y) parent[y] = x;
