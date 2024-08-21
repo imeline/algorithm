@@ -7,6 +7,15 @@
 - 중간 부분은 왼쪽, 오른쪽 상단 노드 중 큰 값과 자신의 값을 더해감
 - 리프 노드 중 가장 큰 값이 답
 
+## 알게 된 것
+- 배열에서 최대/최소값 stream 으로 구하기
+```java
+// 최대
+Arrays.stream(arr).max().getAsInt();
+// 최소
+Arrays.stream(arr).min().getAsInt();
+```
+
 ## 코드 개선
 ```java
 for(int i = 1; i < triangle.length; i++) { 
