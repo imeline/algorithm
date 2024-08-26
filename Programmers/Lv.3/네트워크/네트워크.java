@@ -3,7 +3,7 @@ class Solution {
         boolean[] visited = new boolean[n]; // 초기화 값으로 false 가 들어감
         int network_cnt = 0;
         
-        for(int i = 0; i < n; i++) { // n = computers.length = computers.length[x]
+        for(int i = 0; i < n; i++) { // n = computers.length = computers[x].length
             if(!visited[i]) { // 아직 싸이클이 생성되지 않는 노드 기준으로, DFS를 통해 새로운 사이클 생성
                 dfs(i, visited, computers); // 한 싸이클 생성
                 network_cnt++;
@@ -13,7 +13,7 @@ class Solution {
     }
     
     private void dfs(int node, boolean[] visited, int[][] computers) {
-        visited[node] = true; // 이번 기준노드 node 방문함
+        visited[node] = true; // 이번 차례 기준노드 방문함
         
         for(int j = 0; j < computers.length; j++) { // 기준노드랑 연결된 노드들 확인함
             // 아직 싸이클이 생성 안 된(방문 안 한) 노드 && 기준노드랑 연결된 노드 
