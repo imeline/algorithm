@@ -1,3 +1,4 @@
+// DFS
 class Solution {
     public int solution(int[] numbers, int target) {
         return dfs(numbers, target, 0, 0);
@@ -17,5 +18,37 @@ class Solution {
 
         // 두 가지 경로를 통해 구해진 target 도달 경우의 수를 전체 더 합침
         return plus + minus;
+    }
+}
+
+// BFS
+import java.util.*;
+
+class Solution {
+    public int solution(int[] numbers, int target) {
+        int count = 0;
+        Queue<Integer> q = new LinkedList<>();
+        q.add(0); // index
+        q.add(0); // result
+        
+        while(!q.isEmpty()) {
+            int index = q.poll();
+            int result = q.poll();
+            
+            // numbers.length - 1 이 아닌 이유
+            // 마지막 index의 같은 레벨의 모든 노드들을 돌아야하기 때문에 
+            // 마지막 숫자까지 연산이 끝난 후에야 결과를 확인하기 위해, 범위 밖 index로 결과 확인
+            if(index == numbers.length) {
+                if(result == target) count++;
+            }
+            else {
+                q.add(index + 1);
+                q.add(result + numbers[index]); // plus
+            
+                q.add(index + 1);
+                q.add(result - numbers[index]); //minus
+            }
+        }
+        return count;
     }
 }
