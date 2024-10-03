@@ -42,4 +42,4 @@ else {
 genrePlayCount.put(genre[i], genrePlayCount.getOrDefault(genre[i], 0) + play[i]);
 music.computeIfAbsent(genre[i], k -> new HashMap<>()).put(i, play[i]);
 ```
-`getOrDefault()` 과 `computeIfAbsent()` 을 통해 코드의 중복을 제거하고 간결함 높임
+- `getOrDefault()` 과 `computeIfAbsent()` 을 통해 코드의 중복을 제거하고 간결함 높임
