@@ -1,5 +1,5 @@
 # 문제
-[백준 11724번 - 연결 요소의 개수](acmicpc.net/problem/11724)
+[백준 11724번 - 연결 요소의 개수](https://www.acmicpc.net/problem/11724)
 
 ## 사용 알고리즘
 - DFS 깊이 우선 탐색 <br>
