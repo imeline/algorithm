@@ -1,33 +1,28 @@
-// 더 좋은 코드
-class Solution {
-    public int solution(int[][] board, int[] moves) {
+// 개선 코드
+public int solution(int[][] board, int[] moves) {
         int answer = 0;
         Stack<Integer> stack = new Stack<>();
         for (int move : moves) {
-            for (int j = 0; j < board.length; j++) {
-                if (board[j][move - 1] != 0) {
-                    if (stack.isEmpty()) {
-                        stack.push(board[j][move - 1]);
-                        board[j][move - 1] = 0;
-                        break;
+            for (int j = 0; j < board.length; j++) { // 가장 상단 인형 찾을 때까지
+                int now = board[j][move - 1];
+                if (now != 0) { // true 시 가장 상단 인형, 0은 인형이 없는 칸이니 다음 j 로
+                    if (stack.isEmpty() || now != stack.peek()) {
+                        stack.push(now);  
                     }
-                    if (board[j][move - 1] == stack.peek()) {
+                    else { 
                         stack.pop();
                         answer += 2;
-                    } else
-                        stack.push(board[j][move - 1]);
-                    board[j][move - 1] = 0;
+                    } 
+                    board[j][move - 1] = 0; // 사용 후 없애줌
                     break;
                 }
             }
         }
         return answer;
     }
-}
 
 // 처음 푼 코드
-class Solution {
-    public int solution(int[][] board, int[] moves) {
+public int solution(int[][] board, int[] moves) {
         Map<Integer, Stack<Integer>> map = new HashMap<>();
         Stack<Integer> jo = new Stack<>(); // 크레인을 움직여 인형 모으는 곳
         Stack<Integer> stack; 
@@ -51,4 +46,3 @@ class Solution {
         }
         return answer;
     }
-}
