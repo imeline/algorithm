@@ -18,7 +18,7 @@ public int solution(String[] friends, String[] gifts) {
             gift[b][f_len]--; // 선물 지수 - 1
         }
         
-        int ans = 0;
+        int max = 0;
         for (int i = 0; i < f_len; i++) {
            int cnt = 0;
            for (int j = 0; j < f_len; j++) {
@@ -26,7 +26,7 @@ public int solution(String[] friends, String[] gifts) {
                if (gift[i][j] > gift[j][i]) cnt++;
                else if (gift[i][j] == gift[j][i] && gift[i][f_len] > gift[j][f_len]) cnt++; 
            }
-           ans = Math.max(cnt, ans);
+           max = Math.max(cnt, max);
         }
-        return ans;
+        return max;
     }
